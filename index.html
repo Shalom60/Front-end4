@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body  onload="window.alert('Shalom says Hi!');">
+	       <main>
+       	<div class="row center ">
+       		<div class=" col-2 header m-top" > </div>
+       		 <div class=" col-2 header img m-top" > </div>
+        <div class="col-5 header m-top color-h " > <p> Welcome To This Fun Quiz Game  </p></div>
+       	 </div>
+       	 <div class="row center ">
+             <div class="col-6 m-top" id="score-counter"> </div>
+          </div>
+
+      	 	<div class="row center color-q">
+             <div id="question"> question </div>
+             
+            </div>
+               <div class="row m-l " id="options">
+       	 		<div class="col-3 m-top m-b m-r small-height" id="A" onclick="checkAnswer('A')">A. </div> 
+       	 		<div class="col-3 m-top m-b m-r small-height" id="B" onclick="checkAnswer('B')">B.  </div> 
+       	 		<div class="col-3 m-top m-b m-r small-height" id="C" onclick="checkAnswer('C')"> C.</div> 
+       	 		<div class="col-3 m-top m-b m-r small-height" id="D" onclick="checkAnswer('D')" > D.</div>
+       	      </div>
+       	 	
+        <div class="row center">
+              <button class=" center small-height next " id="next"> Next </button>
+        </div>
+               </main>  
+ <div class="row center" id="final-score">
+              <div class="col-2 center"> </div>
+        </div>
+<script type="text/javascript" src="script.js"></script>
+</body> 
+</html>	
