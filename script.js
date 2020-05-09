@@ -1,4 +1,6 @@
 
+// declare all elements from html code
+
 const scoreCounter = document.getElementById("score-counter");
  const optionA= document.getElementById("A");
 const optionB= document.getElementById("B");
@@ -10,12 +12,15 @@ const finalScore= document.getElementById("final-score");
 const nxtbtn =  document.getElementById("next");
 const main = document.querySelector('main');
 
+// create a <p> element child for final score
 let lastscorepage = document.createElement('p') ;
    finalScore.appendChild(lastscorepage);
 
+// hide the next button and finalscore
 nxtbtn.style.display= "none";
 finalScore.style.display="none";
 
+//store questions in an object
   const questions = [
  {
  	question : "How many planets are in our solar system?",
@@ -66,6 +71,7 @@ finalScore.style.display="none";
 const lastQuestionIndex = questions.length-1;
 let currentQuestionIndex = 0;
 
+// function to display one question  at a time from the questions object
 function displayQuestion(){
    let i = questions[currentQuestionIndex];
    question.innerHTML = "<h3>" + i.question + "</h3>";
@@ -84,10 +90,11 @@ displayQuestion();
 
 
 	
-
+// to display score counter
 let score = 0;
 scoreCounter.innerHTML = "Score:" +"&nbsp"+score+"/5";
 
+// function to check if the clicked option is correct or not
 function checkAnswer(answer){
  if(questions[currentQuestionIndex].correct == answer){
   score++; 
@@ -108,7 +115,7 @@ for(let x=0; x< options.children.length; x++){
 	nxtbtn.style.display= "";
 }
  
-
+// to display final score at the end of the quiz
 function finaScoreDisplay(){
 	main.style.display= "none";
 	finalScore.style.display="";
@@ -117,7 +124,7 @@ function finaScoreDisplay(){
 	
 }
 
-
+// adding functionality with the event listener function to the next button, making it select the next question in the array
 	nxtbtn.addEventListener('click', function next(){
 
 		if(currentQuestionIndex < lastQuestionIndex){
